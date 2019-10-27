@@ -1,0 +1,21 @@
+@import "./loanInfo.scss";
+@import "./swiper.css";
+$ue-width: 750;
+/* ue图的宽度 */
+
+@function px2rem($px) {
+  @return #{$px/$ue-width*10}rem;
+}
+
+// p {
+//   font-size: px2rem(100);
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.common-toast {
+  font-size: 20px;
+}
