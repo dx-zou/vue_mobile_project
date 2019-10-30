@@ -1,0 +1,11 @@
+/* ue图的宽度 */
+$ue-width: 750;
+
+@function px2rem($px) {
+  @return #{$px/$ue-width*10}rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

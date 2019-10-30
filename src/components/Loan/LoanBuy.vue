@@ -1,7 +1,7 @@
 <template>
   <div class="loan-info">
     <div class="info-box">
-      <img src="../assets/images/a6.png" class="icon" alt="" />
+      <img src="@/assets/images/a6.png" class="icon" alt="" />
       <div class="info-text">
         <span>最高30万</span>
         <p>
@@ -10,7 +10,16 @@
       </div>
     </div>
     <div class="info-box">
-      <img src="../assets/images/a3.png" class="icon" alt="" />
+      <img src="@/assets/images/a2.png" class="icon" alt="" />
+      <div class="info-text">
+        <span>足不出户</span>
+        <p>
+          全程网络贷款，无需到门店办理
+        </p>
+      </div>
+    </div>
+    <div class="info-box">
+      <img src="@/assets/images/a4.png" class="icon" alt="" />
       <div class="info-text">
         <span>即日放款</span>
         <p>
@@ -19,20 +28,11 @@
       </div>
     </div>
     <div class="info-box">
-      <img src="../assets/images/a4.png" class="icon" alt="" />
+      <img src="@/assets/images/a7.png" class="icon" alt="" />
       <div class="info-text">
         <span>期限灵活</span>
         <p>
-          贷款周期1-5年，可灵活选择
-        </p>
-      </div>
-    </div>
-    <div class="info-box">
-      <img src="../assets/images/a7.png" class="icon" alt="" />
-      <div class="info-text">
-        <span>轻松还款</span>
-        <p>
-          每月等本等息方式还款
+          贷款期限可选择12、18、24、30、36个月
         </p>
       </div>
     </div>
@@ -41,6 +41,6 @@
 
 <script>
 export default {
-  name: "LoanCompany"
+  name: "StartLoan"
 };
 </script>

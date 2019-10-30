@@ -202,7 +202,7 @@
         </span>
         <div class="about-content">
           <div class="content-item" v-for="item in caseData" :key="item.label">
-            <img src="../../assets/images/icon_news.png" alt="加载失败" />
+            <img src="@/assets/images/icon_news.png" alt="加载失败" />
             <span>
               {{ item.label }}
             </span>
@@ -229,10 +229,10 @@
 import { loanCategory, loanRange, caseData, caseImgs, areaList } from "./data";
 import moment from "moment";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import LoanCompany from "@/components/LoanCompany";
-import LoanBuy from "@/components/LoanBuy";
-import LoanCar from "@/components/LoanCar";
-import LoanHouse from "@/components/LoanHouse";
+import LoanCompany from "@/components/Loan/LoanCompany";
+import LoanBuy from "@/components/Loan/LoanBuy";
+import LoanCar from "@/components/Loan/LoanCar";
+import LoanHouse from "@/components/Loan/LoanHouse";
 const citys = {
   浙江: ["杭州", "宁波", "温州", "嘉兴", "湖州"],
   福建: ["福州", "厦门", "莆田", "三明", "泉州"]

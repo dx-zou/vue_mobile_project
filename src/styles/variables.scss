@@ -1,0 +1,6 @@
+$baseBgColor: #f2f2f2; // 基础背景色
+
+// 导出scss 变量
+:export {
+  baseBgColor: $baseBgColor;
+}
