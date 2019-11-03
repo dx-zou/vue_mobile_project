@@ -13,7 +13,9 @@
           <i class="iconfont icon-wode header-icon"></i>
         </div>
       </div>
-      <div class="header-nav"></div>
+      <div class="header-nav">
+        <span>1px 边框</span>
+      </div>
     </header>
   </div>
 </template>
@@ -30,7 +32,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// $baseBgColor: #f2f2f2;
 .header-wrapper {
   display: flex;
   justify-content: space-between;
@@ -64,5 +65,8 @@ export default {
       font-size: 26px;
     }
   }
+}
+.header-nav {
+  @include thinBorder((top, right, bottom, left), red, (5px, 5px, 5px, 6px));
 }
 </style>

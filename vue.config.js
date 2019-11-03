@@ -4,7 +4,7 @@ module.exports = {
     loaderOptions: {
       sass: {
         // 共享sass 全局变量
-        data: `@import "~@/styles/variables.scss";`
+        data: `@import "~@/styles/variables.scss"; @import "~@/styles/onepx_mixin.scss";`
       }
     }
   },
