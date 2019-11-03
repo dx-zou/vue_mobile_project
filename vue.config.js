@@ -1,6 +1,12 @@
 module.exports = {
   css: {
-    sourceMap: true
+    sourceMap: true,
+    loaderOptions: {
+      sass: {
+        // 共享sass 全局变量
+        data: `@import "~@/styles/variables.scss";`
+      }
+    }
   },
   publicPath: ""
   // devServer: {

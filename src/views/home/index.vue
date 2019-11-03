@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$baseBgColor: #f2f2f2;
+// $baseBgColor: #f2f2f2;
 .header-wrapper {
   display: flex;
   justify-content: space-between;

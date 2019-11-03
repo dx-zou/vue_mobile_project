@@ -229,10 +229,10 @@
 import { loanCategory, loanRange, caseData, caseImgs, areaList } from "./data";
 import moment from "moment";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import LoanCompany from "@/components/Loan/LoanCompany";
-import LoanBuy from "@/components/Loan/LoanBuy";
-import LoanCar from "@/components/Loan/LoanCar";
-import LoanHouse from "@/components/Loan/LoanHouse";
+import LoanCompany from "./components/LoanCompany";
+import LoanBuy from "./components/LoanBuy";
+import LoanCar from "./components/LoanCar";
+import LoanHouse from "./components/LoanHouse";
 const citys = {
   浙江: ["杭州", "宁波", "温州", "嘉兴", "湖州"],
   福建: ["福州", "厦门", "莆田", "三明", "泉州"]
