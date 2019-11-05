@@ -4,6 +4,9 @@
       "libraryName": "vant",
       "libraryDirectory": "es",
       "style": true
+    }],
+    ["@nutui/babel-plugin-separate-import", {
+      "style": "css"
     }]
   ]
 }

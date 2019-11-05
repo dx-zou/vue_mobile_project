@@ -8,7 +8,11 @@ module.exports = {
       }
     }
   },
-  publicPath: ""
+  publicPath: "",
+  loader: "sass-loader",
+  options: {
+    data: `@import "@nutui/nutui/dist/styles/index.scss"; `
+  }
   // devServer: {
   //   proxy: {
   //     "/": {

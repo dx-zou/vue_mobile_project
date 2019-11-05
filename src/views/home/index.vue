@@ -47,13 +47,12 @@ export default {
       color: #ff6b00;
     }
   }
-
+  /* onepx_mixin.scss */
   .header-middle {
-    border: 1px solid #e5e5e5;
+    @include onePxBorder((top, right, bottom, left), #e5e5e5, 5px);
     flex: 1;
     height: 35px;
     line-height: 35px;
-    border-radius: 5px;
     background: #fff;
     color: rgba(0, 0, 0, 0.3);
     .iconfont {
@@ -65,8 +64,5 @@ export default {
       font-size: 26px;
     }
   }
-}
-.header-nav {
-  @include thinBorder((top, right, bottom, left), red, (5px, 5px, 5px, 6px));
 }
 </style>

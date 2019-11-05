@@ -1,4 +1,4 @@
-@mixin thinBorder($directionMaps: bottom, $color: #ccc, $radius:(0, 0, 0, 0), $position: after) {
+@mixin onePxBorder($directionMaps: bottom, $color: #ccc, $radius:(0, 0, 0, 0), $position: after) {
   // 是否只有一个方向
   $isOnlyOneDir: string==type-of($directionMaps);
 

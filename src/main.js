@@ -7,40 +7,45 @@ import "./styles/common.scss";
 import moment from "moment";
 import "./http/request";
 import "./http/api";
-import {
-  Field,
-  Button,
-  Picker,
-  Popup,
-  Cell,
-  CellGroup,
-  DatetimePicker,
-  Tab,
-  Tabs,
-  Card,
-  Toast,
-  CountDown,
-  Area,
-  Search
-} from "vant";
+// 按需引入vant-ui
+// import {
+//   Field,
+//   Button,
+//   Picker,
+//   Popup,
+//   Cell,
+//   CellGroup,
+//   DatetimePicker,
+//   Tab,
+//   Tabs,
+//   Card,
+//   Toast,
+//   CountDown,
+//   Area,
+//   Search
+// } from "vant";
 
-let components = [
-  Field,
-  Button,
-  Picker,
-  Popup,
-  Cell,
-  CellGroup,
-  DatetimePicker,
-  Tab,
-  Tabs,
-  Card,
-  Toast,
-  CountDown,
-  Area,
-  Search
-];
-components.forEach(item => Vue.use(item));
+// let components = [
+//   Field,
+//   Button,
+//   Picker,
+//   Popup,
+//   Cell,
+//   CellGroup,
+//   DatetimePicker,
+//   Tab,
+//   Tabs,
+//   Card,
+//   Toast,
+//   CountDown,
+//   Area,
+//   Search
+// ];
+// components.forEach(item => Vue.use(item));
+// 引入nutui
+import { Dialog } from "@nutui/nutui";
+
+Dialog.install(Vue);
 // 时间过滤器
 Vue.filter("filterTime", (timestr, patter = "YYYY-MM-DD") => {
   return moment(timestr).format(patter);
