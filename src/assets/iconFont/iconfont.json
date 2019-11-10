@@ -13,6 +13,20 @@
       "unicode_decimal": 58927
     },
     {
+      "icon_id": "772984",
+      "name": "down",
+      "font_class": "down",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "1207882",
+      "name": "up",
+      "font_class": "up",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
       "icon_id": "1403435",
       "name": "小米",
       "font_class": "xiaomi",

@@ -2,50 +2,19 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./route";
 import store from "./store/index";
-import "./assets/iconFont/iconfont.css";
 import "./styles/common.scss";
 import moment from "moment";
 import "./http/request";
 import "./http/api";
-// 按需引入vant-ui
-// import {
-//   Field,
-//   Button,
-//   Picker,
-//   Popup,
-//   Cell,
-//   CellGroup,
-//   DatetimePicker,
-//   Tab,
-//   Tabs,
-//   Card,
-//   Toast,
-//   CountDown,
-//   Area,
-//   Search
-// } from "vant";
-
-// let components = [
-//   Field,
-//   Button,
-//   Picker,
-//   Popup,
-//   Cell,
-//   CellGroup,
-//   DatetimePicker,
-//   Tab,
-//   Tabs,
-//   Card,
-//   Toast,
-//   CountDown,
-//   Area,
-//   Search
-// ];
-// components.forEach(item => Vue.use(item));
 // 引入nutui
-import { Dialog } from "@nutui/nutui";
-
-Dialog.install(Vue);
+import { DatePicker, Icon, Button } from "@nutui/nutui";
+let components = [DatePicker, Icon, Button];
+components.forEach(item => Vue.use(item));
+import VueLazyload from "vue-lazyload";
+Vue.use(VueLazyload);
+import preview from "vue-photo-preview";
+import "vue-photo-preview/dist/skin.css";
+Vue.use(preview);
 // 时间过滤器
 Vue.filter("filterTime", (timestr, patter = "YYYY-MM-DD") => {
   return moment(timestr).format(patter);
