@@ -8,6 +8,7 @@ module.exports = {
          @import "~@/styles/onepx_mixin.scss"; 
          @import "@nutui/nutui/dist/styles/index.scss";
          @import "~@/styles/reset-nut.scss";
+         @import "~@/styles/reset.scss";
          `
       }
     }

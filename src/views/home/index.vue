@@ -19,10 +19,10 @@ export default {};
 
 <style lang="scss" scoped>
 .home-container {
-  padding-top: 90px;
+  padding-top: rem(90);
   img {
     width: 100%;
-    height: 200px;
+    height: rem(200);
   }
 }
 </style>

@@ -78,12 +78,14 @@ export default {
 
 <style lang="scss" scoped>
 .app-header-container {
-  max-width: 640px;
-  margin: 0 auto;
+  position: relative;
   overflow: hidden;
 }
 .header-bar {
   position: fixed;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
@@ -94,13 +96,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: rem(5) 0;
   .header-icon {
-    margin: 0 15px;
+    margin: 0 rem(15);
   }
   .header-left {
     .iconfont {
-      font-size: 35px;
+      font-size: rem(35);
       color: #ff6b00;
     }
   }
@@ -108,54 +110,55 @@ export default {
   .header-middle {
     @include onePxBorder((top, right, bottom, left), #e5e5e5, 5px);
     flex: 1;
-    height: 35px;
-    line-height: 35px;
+    height: rem(35);
+    line-height: rem(35);
     background: #fff;
     color: rgba(0, 0, 0, 0.3);
     .iconfont {
-      margin: 0 8px;
+      margin: 0 rem(8);
     }
   }
   .header-right {
     .iconfont {
-      font-size: 26px;
+      font-size: rem(26);
     }
   }
 }
 .header-nav {
   position: relative;
-  padding: 10px 10px 0;
+  overflow: hidden;
+  padding: rem(10) rem(10) 0;
   .header-nav-wrapper {
     width: 150%;
     .nav-item {
       display: inline-block;
-      padding: 0 15px;
-      font-size: 15px;
+      padding: 0 rem(15);
+      font-size: rem(15);
       cursor: pointer;
       span {
         display: inline-block;
-        padding-bottom: 5px;
+        padding-bottom: rem(5);
       }
     }
     .active-item {
       color: $baseThemeColor;
       span {
-        border-bottom: 2px solid $baseThemeColor;
+        border-bottom: rem(2) solid $baseThemeColor;
       }
     }
     .nav-item-extra {
       display: inline-block;
-      padding-right: 50px;
+      padding-right: rem(50);
     }
   }
   .nav-display {
     position: absolute;
-    width: 50px;
-    height: 33px;
+    width: rem(50);
+    height: rem(33);
     right: 0;
-    top: 0px;
+    top: 0;
     text-align: center;
-    line-height: 40px;
+    line-height: rem(40);
     background-color: $baseBgColor;
   }
   .nav-all {
@@ -163,17 +166,19 @@ export default {
       display: flex;
       flex-wrap: wrap;
       .nut-button {
-        margin: 0 10px 10px 0;
+        margin: 0 rem(10) rem(10) 0;
       }
     }
     .nav-all-top {
-      font-size: 15px;
-      margin-bottom: 10px;
+      font-size: rem(15);
+      margin-bottom: rem(10);
     }
   }
 }
 .bg-mask {
   position: fixed;
+  max-width: 640px;
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
