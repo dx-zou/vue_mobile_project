@@ -2,6 +2,7 @@
   <div class="app-wrapper">
     <app-header></app-header>
     <router-view />
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -10,7 +11,8 @@ import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppFooter
   }
 };
 </script>
