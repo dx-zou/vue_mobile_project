@@ -1,20 +1,14 @@
-import layout from "@/layout";
 export default [
   {
     path: "/",
-    redirect: "/home"
+    name: "home",
+    component: () => import(/* webpackChunkName: "home" */ "@/views/home")
   },
   {
-    path: "/app",
-    component: layout,
-    redirect: "/home",
-    children: [
-      {
-        path: "/home",
-        name: "home",
-        component: () => import(/* webpackChunkName: "home" */ "@/views/home")
-      }
-    ]
+    path: "/category",
+    name: "category",
+    component: () =>
+      import(/* webpackChunkName: "category" */ "@/views/category")
   },
   {
     path: "/loan-apply",

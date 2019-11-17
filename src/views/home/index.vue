@@ -1,46 +1,41 @@
 <template>
-  <div class="home-container">
-    <swiper ref="bannerSwiper" :options="bannerSwiperOption">
-      <swiper-slide v-for="item in bannerList" :key="item.id">
-        <img :src="item.src" preview="0" alt="" />
-      </swiper-slide>
-    </swiper>
+  <div class="app-view_wrapper">
+    <app-header @handleNavChange="handleNavChange"></app-header>
+    <div class="home-view_container">
+      <component :is="componentId"></component>
+    </div>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import AppHeader from "@/components/AppHeader";
+import AppFooter from "@/components/AppFooter";
+import AppRecommend from "./components/AppRecommend";
 export default {
   data() {
     return {
-      bannerList: [
-        {
-          id: 0,
-          src: require("@/assets/home-imgs/banner1.jpg")
-        },
-        {
-          id: 1,
-          src: require("@/assets/home-imgs/banner2.jpg")
-        },
-        {
-          id: 2,
-          src: require("@/assets/home-imgs/banner3.jpg")
-        }
-      ],
-      bannerSwiperOption: {
-        loop: true,
-        autoplay: true
-      }
+      componentId: "AppRecommend",
+      componentList: ["AppRecommend"]
     };
+  },
+  components: {
+    AppHeader,
+    AppFooter,
+    AppRecommend
+  },
+  methods: {
+    handleNavChange(val) {
+      this.componentId = this.componentList[val];
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.home-container {
-  padding-top: rem(85);
-  img {
-    width: 100%;
-    height: rem(180);
-  }
+.app-view_wrapper {
+  padding: rem(85) 0 rem(55);
+  height: 100vh;
+  background-color: $baseBgColor;
 }
 </style>

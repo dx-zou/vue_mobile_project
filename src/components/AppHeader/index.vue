@@ -20,8 +20,7 @@
             slot="list"
             v-for="(item, index) of navList"
             :key="index"
-            class="nav-item"
-            :class="activeNav === index ? 'active-item' : ''"
+            :class="['nav-item', activeNav === index ? 'active-item' : '']"
             @click="handleNavClick(index)"
           >
             <span>
@@ -71,6 +70,7 @@ export default {
     },
     handleNavClick(index) {
       this.activeNav = index;
+      this.$emit("handleNavChange", index);
     }
   }
 };
