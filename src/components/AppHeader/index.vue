@@ -121,10 +121,10 @@ export default {
   }
   /* onepx_mixin.scss */
   .header-middle {
-    @include onePxBorder((top, right, bottom, left), #e5e5e5, 3px);
+    @include onePxBorder((top, right, bottom, left), #e5e5e5, 0.05rem);
     flex: 1;
-    height: 60px;
-    line-height: 60px;
+    height: 0.6rem;
+    line-height: 0.6rem;
     background: #fff;
     color: rgba(0, 0, 0, 0.3);
     .iconfont {
@@ -143,7 +143,7 @@ export default {
   overflow: hidden;
   padding: 0.1rem 0.2rem 0;
   .header-nav-wrapper {
-    width: 120%;
+    width: 150%;
     .nav-item {
       display: inline-block;
       padding: 0 0.3rem;
