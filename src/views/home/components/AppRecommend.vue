@@ -4,6 +4,7 @@
       <swiper-slide v-for="item in bannerList" :key="item.id">
         <img :src="item.src" preview="0" alt="" />
       </swiper-slide>
+      <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -28,8 +29,11 @@ export default {
         }
       ],
       bannerSwiperOption: {
-        loop: true
-        // autoplay: true
+        loop: true,
+        autoplay: true,
+        pagination: {
+          el: ".swiper-pagination"
+        }
       }
     };
   },

@@ -31,7 +31,13 @@
         <div class="nav-all" v-else>
           <div class="nav-all-top">全部</div>
           <div class="nav-all-wrap">
-            <nut-button type="light" small v-for="item in navList" :key="item">
+            <nut-button
+              type="light"
+              small
+              v-for="(item, index) in navList"
+              :key="item"
+              :class="index === 3 && 'none-margin_right'"
+            >
               {{ item }}
             </nut-button>
           </div>
@@ -59,6 +65,9 @@ export default {
     this.initBetterScroll();
   },
   methods: {
+    /**
+     * @description init betterScroll
+     */
     initBetterScroll() {
       this.scroll = new BScroll(".header-nav", {
         startX: 0,
@@ -68,6 +77,10 @@ export default {
         click: true
       });
     },
+    /**
+     * @description 导航栏点击事件
+     * @params {Number} index 导航索引
+     */
     handleNavClick(index) {
       this.activeNav = index;
       this.$emit("handleNavChange", index);
@@ -84,7 +97,7 @@ export default {
 .header-bar {
   position: fixed;
   width: 100%;
-  max-width: 640px;
+  max-width: 750px;
   margin: 0 auto;
   top: 0;
   left: 0;
@@ -96,44 +109,45 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.05rem 0;
+  padding: 0.1rem 0;
   .header-icon {
-    margin: 0 rem(15);
+    margin: 0 0.2rem;
   }
   .header-left {
     .iconfont {
-      font-size: 0.4rem;
+      font-size: 0.6rem;
       color: #ff6b00;
     }
   }
   /* onepx_mixin.scss */
   .header-middle {
-    @include onePxBorder((top, right, bottom, left), #e5e5e5, 5px);
+    @include onePxBorder((top, right, bottom, left), #e5e5e5, 6px);
     flex: 1;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
     background: #fff;
     color: rgba(0, 0, 0, 0.3);
     .iconfont {
-      margin: 0 0.08rem;
+      margin: 0 0.15rem;
+      font-size: 0.35rem;
     }
   }
   .header-right {
     .iconfont {
-      font-size: 0.4rem;
+      font-size: 0.5rem;
     }
   }
 }
 .header-nav {
   position: relative;
   overflow: hidden;
-  padding: 0.1rem 0.1rem 0;
+  padding: 0.1rem 0.2rem 0;
   .header-nav-wrapper {
     width: 120%;
     .nav-item {
       display: inline-block;
-      padding: 0 0.2rem;
-      font-size: 0.18rem;
+      padding: 0 0.3rem;
+      font-size: 0.23rem;
       cursor: pointer;
       span {
         display: inline-block;
@@ -166,18 +180,24 @@ export default {
       display: flex;
       flex-wrap: wrap;
       .nut-button {
-        margin: 0 0.1rem 0.1rem 0;
+        height: 60px;
+        width: 150px;
+        margin: 0 0.28rem 0.1rem 0;
+        font-size: 0.2rem;
+      }
+      .none-margin_right {
+        margin-right: 0;
       }
     }
     .nav-all-top {
-      font-size: 0.16rem;
+      font-size: 0.3rem;
       margin-bottom: 0.1rem;
     }
   }
 }
 .bg-mask {
   position: fixed;
-  max-width: 640px;
+  max-width: 750px;
   margin: 0 auto;
   top: 0;
   left: 0;

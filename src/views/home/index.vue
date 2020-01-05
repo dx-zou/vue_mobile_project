@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-view_wrapper {
-  padding: 1rem 0;
+  padding: 1.4rem 0;
   height: 100vh;
   background-color: $baseBgColor;
 }

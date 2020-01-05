@@ -1,11 +1,16 @@
 <template>
   <div>
-    category
+    <app-footer />
   </div>
 </template>
 
 <script>
-export default {};
+import AppFooter from "@/components/AppFooter";
+export default {
+  components: {
+    AppFooter
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>

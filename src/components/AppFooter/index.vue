@@ -1,6 +1,6 @@
 <template>
   <footer class="app-footer">
-    <router-link to="/home">
+    <router-link to="/">
       <div class="iconfont icon-home"></div>
       <span>首页</span>
     </router-link>
@@ -29,24 +29,24 @@ export default {
 .app-footer {
   display: flex;
   position: fixed;
-  max-width: 640px;
+  max-width: 750px;
   margin: 0 auto;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0.05rem 0;
+  padding: 0.1rem 0;
   background-color: #fff;
   a {
     display: block;
     flex: 1;
     text-align: center;
-    font-size: 0.12rem;
+    font-size: 0.18rem;
     color: #999;
     .iconfont {
       margin-bottom: 0.05rem;
-      font-size: rem(18);
+      font-size: 0.4rem;
     }
-    &.router-link-active {
+    &.router-link-exact-active {
       color: $baseThemeColor;
     }
   }
