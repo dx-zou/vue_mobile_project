@@ -29,19 +29,21 @@ export default {
 .app-footer {
   display: flex;
   position: fixed;
+  max-width: 640px;
+  margin: 0 auto;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: rem(5) 0;
+  padding: 0.05rem 0;
   background-color: #fff;
   a {
     display: block;
     flex: 1;
     text-align: center;
-    font-size: rem(12);
+    font-size: 0.12rem;
     color: #999;
     .iconfont {
-      margin-bottom: rem(5);
+      margin-bottom: 0.05rem;
       font-size: rem(18);
     }
     &.router-link-active {

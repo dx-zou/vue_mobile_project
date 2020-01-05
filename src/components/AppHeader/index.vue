@@ -96,13 +96,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(5) 0;
+  padding: 0.05rem 0;
   .header-icon {
     margin: 0 rem(15);
   }
   .header-left {
     .iconfont {
-      font-size: rem(35);
+      font-size: 0.4rem;
       color: #ff6b00;
     }
   }
@@ -110,55 +110,55 @@ export default {
   .header-middle {
     @include onePxBorder((top, right, bottom, left), #e5e5e5, 5px);
     flex: 1;
-    height: rem(35);
-    line-height: rem(35);
+    height: 0.5rem;
+    line-height: 0.5rem;
     background: #fff;
     color: rgba(0, 0, 0, 0.3);
     .iconfont {
-      margin: 0 rem(8);
+      margin: 0 0.08rem;
     }
   }
   .header-right {
     .iconfont {
-      font-size: rem(26);
+      font-size: 0.4rem;
     }
   }
 }
 .header-nav {
   position: relative;
   overflow: hidden;
-  padding: rem(10) rem(10) 0;
+  padding: 0.1rem 0.1rem 0;
   .header-nav-wrapper {
-    width: 150%;
+    width: 120%;
     .nav-item {
       display: inline-block;
-      padding: 0 rem(15);
-      font-size: rem(15);
+      padding: 0 0.2rem;
+      font-size: 0.18rem;
       cursor: pointer;
       span {
         display: inline-block;
-        padding-bottom: rem(5);
+        padding-bottom: 0.1rem;
       }
     }
     .active-item {
       color: $baseThemeColor;
       span {
-        border-bottom: rem(2) solid $baseThemeColor;
+        border-bottom: 0.02rem solid $baseThemeColor;
       }
     }
     .nav-item-extra {
       display: inline-block;
-      padding-right: rem(50);
+      padding-right: 0.5rem;
     }
   }
   .nav-display {
     position: absolute;
-    width: rem(50);
-    height: rem(33);
+    width: 0.6rem;
+    height: 0.4rem;
     right: 0;
-    top: 0;
+    top: 0.05rem;
     text-align: center;
-    line-height: rem(40);
+    line-height: 0.4rem;
     background-color: $baseBgColor;
   }
   .nav-all {
@@ -166,12 +166,12 @@ export default {
       display: flex;
       flex-wrap: wrap;
       .nut-button {
-        margin: 0 rem(10) rem(10) 0;
+        margin: 0 0.1rem 0.1rem 0;
       }
     }
     .nav-all-top {
-      font-size: rem(15);
-      margin-bottom: rem(10);
+      font-size: 0.16rem;
+      margin-bottom: 0.1rem;
     }
   }
 }

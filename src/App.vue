@@ -11,5 +11,6 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   width: 100%;
+  font-size: initial;
 }
 </style>

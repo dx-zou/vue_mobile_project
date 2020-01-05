@@ -41,7 +41,7 @@ export default {
 .swiper-slide {
   img {
     width: 100%;
-    height: rem(180);
+    height: 3.5rem;
   }
 }
 </style>

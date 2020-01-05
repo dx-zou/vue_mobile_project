@@ -1,10 +1,10 @@
 <template>
   <div class="app-view_wrapper">
-    <app-header @handleNavChange="handleNavChange"></app-header>
+    <app-header @handleNavChange="handleNavChange" />
     <div class="home-view_container">
       <component :is="componentId"></component>
     </div>
-    <app-footer></app-footer>
+    <app-footer />
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-view_wrapper {
-  padding: rem(85) 0 rem(55);
+  padding: 1rem 0;
   height: 100vh;
   background-color: $baseBgColor;
 }
