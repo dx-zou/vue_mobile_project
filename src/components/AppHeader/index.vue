@@ -121,10 +121,10 @@ export default {
   }
   /* onepx_mixin.scss */
   .header-middle {
-    @include onePxBorder((top, right, bottom, left), #e5e5e5, 6px);
+    @include onePxBorder((top, right, bottom, left), #e5e5e5, 3px);
     flex: 1;
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 60px;
+    line-height: 60px;
     background: #fff;
     color: rgba(0, 0, 0, 0.3);
     .iconfont {
