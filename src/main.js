@@ -4,6 +4,7 @@ import router from "./route";
 import store from "./store/index";
 import "./styles/common.scss";
 import moment from "moment";
+import animated from "animate.css";
 import "./http/request";
 import "./http/api";
 // 全局引入swiper
@@ -11,6 +12,7 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 // require styles
 import "swiper/dist/css/swiper.css";
 Vue.use(VueAwesomeSwiper /* { default global options } */);
+Vue.use(animated)
 // 引入nutui
 import { DatePicker, Icon, Button } from "@nutui/nutui";
 let components = [DatePicker, Icon, Button];
