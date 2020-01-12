@@ -1,6 +1,5 @@
 <template>
   <div class="app-header-container">
-    <div class="bg-mask" v-if="!navCollapse" @click="navCollapse = true"></div>
     <header class="header-bar">
       <div class="header-wrapper">
         <div class="header-left">
@@ -42,7 +41,7 @@
             </nut-button>
           </div>
         </div>
-        <div class="nav-display" @click="navCollapse = !navCollapse">
+        <div class="nav-display" @click="handleNavCollapse">
           <i :class="['iconfont', navCollapse ? 'icon-down' : 'icon-up']"></i>
         </div>
       </div>
@@ -52,14 +51,17 @@
 
 <script>
 import BScroll from "better-scroll";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       navList: ["推荐", "手机", "智能", "电视", "笔记本", "家电", "生活周边"],
       activeNav: 0,
-      scroll: null,
-      navCollapse: true
+      scroll: null
     };
+  },
+  computed: {
+    ...mapGetters(["navCollapse"])
   },
   mounted() {
     this.initBetterScroll();
@@ -77,6 +79,14 @@ export default {
         click: true
       });
     },
+
+    /**
+     * @description 切换导航栏折叠状态
+     */
+    handleNavCollapse() {
+      this.$store.commit("CHANGE_NAVCOLLAPSE");
+    },
+
     /**
      * @description 导航栏点击事件
      * @params {Number} index 导航索引
@@ -91,19 +101,14 @@ export default {
 
 <style lang="scss" scoped>
 .app-header-container {
-  position: relative;
-  overflow: hidden;
-}
-.header-bar {
   position: fixed;
-  width: 100%;
   max-width: 750px;
-  margin: 0 auto;
   top: 0;
-  left: 0;
-  right: 0;
-  background-color: $baseBgColor;
+  margin: 0 auto;
   z-index: 99;
+  .header-bar {
+    background-color: $baseBgColor;
+  }
 }
 .header-wrapper {
   display: flex;
@@ -115,7 +120,7 @@ export default {
   }
   .header-left {
     .iconfont {
-      font-size: 0.6rem;
+      font-size: 60px;
       color: #ff6b00;
     }
   }
@@ -143,7 +148,7 @@ export default {
   overflow: hidden;
   padding: 0.1rem 0.2rem 0;
   .header-nav-wrapper {
-    width: 150%;
+    width: 140%;
     .nav-item {
       display: inline-block;
       padding: 0 0.3rem;
@@ -180,8 +185,8 @@ export default {
       display: flex;
       flex-wrap: wrap;
       .nut-button {
-        height: 60px;
-        width: 150px;
+        height: 0.6rem;
+        width: 1.5rem;
         margin: 0 0.28rem 0.1rem 0;
         font-size: 0.2rem;
       }
@@ -194,16 +199,5 @@ export default {
       margin-bottom: 0.1rem;
     }
   }
-}
-.bg-mask {
-  position: fixed;
-  max-width: 750px;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 90;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 </style>

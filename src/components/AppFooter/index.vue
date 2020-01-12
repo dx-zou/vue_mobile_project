@@ -28,12 +28,6 @@ export default {
 <style lang="scss" scoped>
 .app-footer {
   display: flex;
-  position: fixed;
-  max-width: 750px;
-  margin: 0 auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 0.1rem 0;
   background-color: #fff;
   a {
