@@ -2,6 +2,9 @@
   "name": "vue-mobile-project",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "dx-zou"
+  },
   "scripts": {
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
