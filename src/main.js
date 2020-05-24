@@ -1,18 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./route";
-import store from "./store/index";
+import store from "./store";
 import "./styles/common.scss";
-import moment from "moment";
-import animated from "animate.css";
-import "./http/request";
-import "./http/api";
-// 全局引入swiper
-import VueAwesomeSwiper from "vue-awesome-swiper";
-// require styles
-import "swiper/dist/css/swiper.css";
-Vue.use(VueAwesomeSwiper /* { default global options } */);
-Vue.use(animated)
+import "animate.css";
+import service from "./http/request";
+import API from "./http/api";
 // 引入nutui
 import { DatePicker, Icon, Button } from "@nutui/nutui";
 let components = [DatePicker, Icon, Button];
@@ -24,10 +17,11 @@ Vue.use(VueLazyload);
 import preview from "vue-photo-preview";
 import "vue-photo-preview/dist/skin.css";
 Vue.use(preview);
-// 时间过滤器
-Vue.filter("filterTime", (timestr, patter = "YYYY-MM-DD") => {
-  return moment(timestr).format(patter);
-});
+
+// 挂载全局实例属性
+Vue.prototype.$api = API;
+Vue.prototype.$http = service;
+
 Vue.config.productionTip = false;
 
 new Vue({

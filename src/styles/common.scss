@@ -1,9 +1,7 @@
-@import "./loanInfo";
-// @import "./swiper.css";
-@import "./reset";
+@import "./reset.scss";
 @import "../assets/iconFont/iconfont.css";
 
 // 公共toast样式
 .common-toast {
-  font-size: 20px;
+	font-size: 20px;
 }

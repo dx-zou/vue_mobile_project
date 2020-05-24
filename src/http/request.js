@@ -1,5 +1,4 @@
 import axios from "axios";
-import Vue from "vue";
 import config from "./api";
 const service = axios.create({
   baseURL: config.API.BASE_URL,
@@ -35,5 +34,4 @@ service.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-Vue.prototype.$http = service;
 export default service;

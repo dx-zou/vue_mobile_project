@@ -4,7 +4,7 @@ module.exports = {
     loaderOptions: {
       sass: {
         // 共享sass 全局变量
-        data: `@import "~@/styles/variables.scss";
+        prependData: `@import "~@/styles/variables.scss";
          @import "~@/styles/onepx_mixin.scss"; 
          @import "@nutui/nutui/dist/styles/index.scss";
          @import "~@/styles/reset-nut.scss";
